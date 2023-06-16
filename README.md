@@ -1,2 +1,2 @@
 # my-js
-Hello!!
+Hello!
