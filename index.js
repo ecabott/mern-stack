@@ -14,13 +14,23 @@ console.log(c);
 //  const age = prompt('age?');
 //  console.log(age);
 
-let x = 1;
-let y = 2;
-if (x == 1){
-    console.log('x is 1');
-}
+let x = 11;
+// let y = 2;
+// if (x == 1){
+//     console.log('x is 1');
+// }
 
-if (x == 1 && y == 2)
-{
-    console.log('&& operator tested');
-}
+// if (x == 1 && y == 2)
+// {
+//     console.log('&& operator tested');
+// }
+
+// if (x == 1){
+//     console.log('x is 1');
+// }
+// else {
+//     console.log('x is not 1');
+// }
+
+let result = x === 1 ? 'x is 1' : 'x is not 1';
+console.log(result);
