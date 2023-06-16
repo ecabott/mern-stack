@@ -34,3 +34,18 @@ let x = 11;
 
 let result = x === 1 ? 'x is 1' : 'x is not 1';
 console.log(result);
+
+// learning about functions
+
+// function add (a,b){
+//     return a + b;
+//     console.log(a+b);
+// };
+
+//ES6 Style (Arrow Function)
+const add = (a, b) => {
+    console.log(a+b);
+}
+
+add(1,2);
+add(3,6);
