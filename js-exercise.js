@@ -46,3 +46,20 @@ const newC = ((oldF-32)/9)*5;
 const newF = ((oldC/5)*9)+32;
 console.log(oldC+'℃ is '+newF+'℉');
 console.log(oldF+'℉ is '+newC+'℃');
+
+//Counting number of vowels in a string
+const f = prompt('Enter a string');
+const countVowels = (str) =>
+{
+    const vowels = 'AaEeIiOoUu';
+    let count = 0;
+    for(const char of str)
+    {
+        if(vowels.includes(char))
+        {
+            count++;
+        }
+    }
+    console.log(count);
+}
+countVowels(f);
