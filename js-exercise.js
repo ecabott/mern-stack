@@ -25,3 +25,6 @@ else if(c%7 == 0){
 else{
     console.log('It is not a multiple of 3 or 7');
 }
+
+//Getting current date
+console.log(Date());
