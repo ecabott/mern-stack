@@ -13,3 +13,15 @@ if(a == b){
 else{
     console.log('Their sum is '+(a+b));
 }
+
+//Checking if a given number is a multiple of 3 or 7
+const c = Number(prompt('Enter a number'));
+if(c%3 == 0){
+    console.log('It is a multiple of 3');
+}
+else if(c%7 == 0){
+    console.log('It is a multiple of 7');
+}
+else{
+    console.log('It is not a multiple of 3 or 7');
+}
