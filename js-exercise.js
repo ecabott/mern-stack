@@ -28,3 +28,13 @@ else{
 
 //Getting current date
 console.log(Date());
+
+//Calculating multiplication and division of two numbers
+const d = Number(prompt('Enter a number'));
+const e = Number(prompt('Enter a number'));
+const mnd = (a, b) =>
+{
+    console.log(a*b);
+    console.log(a/b);
+}
+mnd(d, e);
