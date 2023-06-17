@@ -16,7 +16,10 @@ else{
 
 //Checking if a given number is a multiple of 3 or 7
 const c = Number(prompt('Enter a number'));
-if(c%3 == 0){
+if(c%3 == 0 && c%7 == 0){
+    console.log('It is a multiple of both 3 and 7');
+}
+else if(c%3 == 0){
     console.log('It is a multiple of 3');
 }
 else if(c%7 == 0){
