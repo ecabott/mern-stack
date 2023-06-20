@@ -14,16 +14,28 @@ console.log(c, a);
 
 //Arrays
 console.log('Arrays');
-const arr = ['Bugatti', 'BMW', 'Porshe', {name:'alto'}];
+const cars = ['Bugatti', 'BMW', 'Porshe', {name:'alto'}];
 //access the first item
-const b = arr[0];
+const b = cars[0];
 console.log(b);
 //access the last item
-const e = arr[arr.length - 1];
+const e = cars[cars.length - 1];
 console.log(e);
 
-console.log(arr.length);
-console.log(arr.sort());
-console.log(arr.push('new car'));
-console.log(arr.pop());
+console.log(cars.length);
+console.log(cars.sort());
+console.log(cars.push('new car'));
+console.log(cars.pop());
 
+//User model
+const user = {
+    firstName: 'John',
+    lastName: 'Cena',
+    email: 'john@cena.com',
+    password: '12345678',
+    phone: '9800000000',
+};
+
+//User list
+const {password, phone, ...rest} = user;
+console.log({rest});
