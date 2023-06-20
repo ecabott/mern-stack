@@ -39,3 +39,14 @@ const user = {
 //User list
 const {password, phone, ...rest} = user;
 console.log({rest});
+
+//getting select data from array
+const arr = ['a', 'b', 'c', 'd'];
+const [first, ...resta] = arr;
+console.log(resta.toString());
+
+const myFunction = (data) => {
+    console.log("hi!", data);
+};
+
+arr.map(myFunction).toString();
