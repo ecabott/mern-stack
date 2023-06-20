@@ -50,3 +50,12 @@ const myFunction = (data) => {
 };
 
 arr.map(myFunction).toString();
+
+const myName = (salutation, name) => {
+    if(salutation ===""){
+        salutation = salutation || 'Mr';
+    }
+    console.log(`${salutation} ${name}`);
+};
+myName('Dr', 'Mario');
+myName('', 'Suman');
