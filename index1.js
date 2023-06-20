@@ -1,61 +1,51 @@
-//learning about object and functions
-console.log('Object and function');
-const person = {
-    firstName: "John",
-    lastName: "Doe",
-    fullName: () => {
-        return `${person.firstName} ${person.lastName}`
-    },
-};
+//using var
+var a = '123';
+console.log(a);
 
-const c = person.firstName;
-const a = person.fullName();
-console.log(c, a);
-
-//Arrays
-console.log('Arrays');
-const cars = ['Bugatti', 'BMW', 'Porshe', {name:'alto'}];
-//access the first item
-const b = cars[0];
+//using let
+let b = '456';
 console.log(b);
-//access the last item
-const e = cars[cars.length - 1];
-console.log(e);
 
-console.log(cars.length);
-console.log(cars.sort());
-console.log(cars.push('new car'));
-console.log(cars.pop());
+//using const
+const c = 789;
+console.log(c);
 
-//User model
-const user = {
-    firstName: 'John',
-    lastName: 'Cena',
-    email: 'john@cena.com',
-    password: '12345678',
-    phone: '9800000000',
-};
+//  alert('hmm');
+//  const age = prompt('age?');
+//  console.log(age);
 
-//User list
-const {password, phone, ...rest} = user;
-console.log({rest});
+let x = 11;
+// let y = 2;
+// if (x == 1){
+//     console.log('x is 1');
+// }
 
-//getting select data from array
-const arr = ['a', 'b', 'c', 'd'];
-const [first, ...resta] = arr;
-console.log(resta.toString());
+// if (x == 1 && y == 2)
+// {
+//     console.log('&& operator tested');
+// }
 
-const myFunction = (data) => {
-    console.log("hi!", data);
-};
+// if (x == 1){
+//     console.log('x is 1');
+// }
+// else {
+//     console.log('x is not 1');
+// }
 
-arr.map(myFunction).toString();
+let result = x === 1 ? 'x is 1' : 'x is not 1';
+console.log(result);
 
-const myName = (salutation, name) => {
-    if(salutation ===""){
-        salutation = salutation || 'Mr';
-    }
-    console.log(`${salutation} ${name}`);
-};
-myName('Dr', 'Mario');
-myName('', 'Suman');
+// learning about functions
+
+// function add (a,b){
+//     return a + b;
+//     console.log(a+b);
+// };
+
+//ES6 Style (Arrow Function)
+const add = (a, b) => {
+    console.log(a+b);
+}
+
+add(1,2);
+add(3,6);
