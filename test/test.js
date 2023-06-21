@@ -1,8 +1,8 @@
 //Object
 const person = {
-    firstName: 'Ayush',
-    lastName: 'Bhusal',
-    email: 'ayush.bhusal0@gmail.com',
+    firstName: 'Ghost',
+    lastName: 'Cat',
+    email: 'ghostcat@google.com',
     password: '00000000',
 
     fullName: () => {
