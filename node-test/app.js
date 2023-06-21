@@ -1,6 +1,8 @@
 const http = require('http');
 const currentDateTime = require('./myFirstModule')
 const uc = require('upper-case');
+const fs = require('fs');
+const rs = fs.createReadStream('./test.txt');
 
 http.createServer ((req, res) => {
     res.writeHead(200,{'Content-Type':'text/html'});
