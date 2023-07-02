@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const contactController = require('../modules/contacts/contact.controller')
+const contactRoute = require('../modules/contacts/contact.routes.api')
 
 router.get("/", (req, res, next) => {
   try {
@@ -10,10 +12,6 @@ router.get("/", (req, res, next) => {
     next(err);
   }
 });
-
-router.post('/form', (req, res, next) => {
-  console.log({data: req.body});
-  res.json({msg: "Thank you form submitting the form"});
-});
+router.use('/contact',contactRoute);
 
 module.exports = router;

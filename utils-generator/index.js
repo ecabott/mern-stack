@@ -3,7 +3,12 @@ const morgan = require("morgan");
 const cors = require("cors");
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
+const mongoose = require('mongoose');
 
+// mongodb connection
+mongoose.connect('mongodb://127.0.0.1:27017/utils-generator')
+  .then(() => console.log('Database Connected!'))
+  .catch((err) => console.log('Database is not Connected!'));
 const app = express();
 
 const indexRouter = require("./routes");

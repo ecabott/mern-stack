@@ -8,6 +8,9 @@
 <body>
     <form id="contactForm" onsubmit="formSubmit(); return false;">
         <input type="text" id="name" name="name" placeholder="name" />
+        <input type="number" id="age" name="age" placeholder="age" /><br>
+        <input type="number" id="phone" name="phone" placeholder="phone" />
+        <input type="text" id="email" name="email" placeholder="email" /><br>
         <button type="submit">Submit</button>
     </form>
 
@@ -21,6 +24,9 @@
             // Capture input from form
             const payload = {
                 name: document.getElementById('name').value,
+                age: document.getElementById('age').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
             };
             // Send data to server
             axios.post("/api/v1/form", payload).then((res) => {
