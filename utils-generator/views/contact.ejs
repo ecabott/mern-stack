@@ -29,7 +29,7 @@
                 email: document.getElementById('email').value,
             };
             // Send data to server
-            axios.post("/api/v1/form", payload).then((res) => {
+            axios.post("/api/v1/contacts", payload).then((res) => {
                 // Display the data
                 document.getElementById('msg').innerHTML = res.data.msg;
                 // Reset form after success
