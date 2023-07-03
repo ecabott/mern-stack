@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/utils-generator')
   .then(() => console.log('Database Connected!'))
   .catch((err) => console.log('Database is not Connected!'));
+
 const app = express();
 
 const indexRouter = require("./routes");
@@ -16,7 +17,11 @@ const indexRouter = require("./routes");
 // Setting up the third party middlewares
 app.use(morgan("short"));
 app.use(cors());
+
+// JSON data capture
 app.use(bodyParser.json());
+
+// Form data capture
 app.use(bodyParser.urlencoded({extended: true}));
 
 // Setting up the EJS Templating
@@ -26,12 +31,12 @@ app.set("views", "./views");
 // Serving the static files
 app.use(express.static('public'));
 
-app.use("/", indexRouter);
-
 // To test application level error handling
-// app.get('/broken', (req, res, next) => {
-//   throw new Error('Broken');
-// });
+app.get('/broken', (req, res, next) => {
+  throw new Error('Broken');
+});
+
+app.use("/", indexRouter);
 
 // Application level error handling
 app.use((err, req, res, next) => {
