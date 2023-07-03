@@ -1,6 +1,7 @@
 const Model = require('./contact.model');
 
 const create = (payload) => {
+    // Writing in DB
     return Model.create(payload);
 };
 
