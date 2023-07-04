@@ -1,24 +1,24 @@
-const Model = require('./contact.model');
+const contactModel = require('./contact.model');
 
 const create = (payload) => {
     // Writing in DB
-    return Model.create(payload);
+    return contactModel.create(payload);
 };
 
 const list = () => {
-    return Model.find();
+    return contactModel.find();
 };
 
 const getById = (id) => {
-    return Model.findOne(id);
+    return contactModel.findOne(id);
 };
 
 const update = (id, payload) => {
-    return Model.updateOne(id, payload);
+    return contactModel.updateOne(id, payload);
 };
 
 const remove = (id) => {
-    return Model.deleteOne(id);
+    return contactModel.deleteOne(id);
 };
 
 module.exports = {create, list, getById, update, remove};
